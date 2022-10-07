@@ -1,3 +1,111 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root 
+{
+ --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+--soft-red: hsl(14, 88%, 65%);
+
+/* #### Gradient */
+
+/* Background gradient: */
+
+--soft-violet: hsl(273,75%,66%);
+
+--soft-blue: hsl(240, 73%, 65%);
+
+/* ### Neutral */
+
+/* #### Text*/
+
+--very-dark-grayish-blue: hsl(237, 12%, 33%);
+--dark-grayish-blue: hsl(240, 6%, 50%);
+
+/* #### Dividers */
+
+--light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  font-family:"Kumbh Sans",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background  : linear-gradient(120deg, var(--soft-violet), var(--soft-blue));
+ background-repeat: no-repeat;
+ font-size: 12px;
+ min-height: 100vh;
+ padding: 1.5rem;
+ display: flex;
+ 
+}
+.container {
+  width:400px;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.container > article h1{
+  color: var(--very-dark-desaturated-blue);
+  font-size: 40px;
+  margin-bottom: 1.5rem;
+}
+.arrow{
+  display: flex;
+  justify-content: space-between;
+  height: 0.75rem;
+}
+.singleContainer  h2{
+  color:var(--dark-grayish-blue);
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+.singleContainer .clicked{
+  color:var(--soft-red);
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+.make-flex{
+  display: flex;
+  justify-content: space-between;
+}
+.singleContainer p{
+  color:var(--light-grayish-blue);
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+picture {
+  display: block;
+  margin: auto;
+}
+
+@media (min-width : 768px){
+
+.container{
+  width: 568px;
+  align-items: center;
+}
+.container > picture img{
+  display: block;
+  margin: auto;
+}
+}
+@media (min-width : 1024px){
+.container{
+  display: flex;
+  width: 992px;
+  align-items: center;
+}
+.container > picture img{
+  display: block;
+  margin-right: 3rem;
+}
+}
